@@ -11,15 +11,24 @@ var path = require("path");
 
 module.exports = function(app) {
   // HTML GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
-
   app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/survey.html"));
+    res.sendFile(path.join(__dirname, "../survey.html"));
+  });
+
+  app.get("/public/css/home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../../public/css/home.css"));
+  });
+
+  app.get("/public/css/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "../../public/css/survey.css"));
+  });
+  
+  app.get("/public/js/survey", function(req, res) {
+    res.sendFile(path.join(__dirname, "../../public/js/survey.js"));
   });
 
   app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../home.html"));
   });
 };
