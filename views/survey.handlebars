@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="/static/css/survey.css">
+<script src="/static/js/survey.js"></script>
+
+<div class="container">
+
+    <div id="survey-card" class="card bg-light my-2">
+        <div class="card-header text-white bg-info">
+            <span>Survey Questions</span>
+        </div>
+        <div class="card-body p-2">
+            <div id="about-you-card" class="card mb-2">
+                <div class="card-header text-white bg-secondary">
+                    <span>About You</span>
+                </div>
+                <div class="container p-1">
+                    <div class="input-group my-1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="input-group-name">Name (Required)</span>
+                        </div>
+                        <input id="input-name" type="text" class="form-control" aria-label="Name" aria-describedby="input-group-name">
+                    </div>
+                    <div class="input-group my-1">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="input-group-select-race">&nbsp;Race (Optional)</label>
+                        </div>
+                        <select class="custom-select" id="input-group-select-race">
+                            <option value="" selected>Choose...</option>
+                            <option value="Dragonborn">Dragonborn</option>
+                            <option value="Dwarf">Dwarf</option>
+                            <option value="Elf">Elf</option>
+                            <option value="Gnome">Gnome</option>
+                            <option value="Half-Elf">Half-Elf</option>
+                            <option value="Halfling">Halfling</option>
+                            <option value="Half-Orc">Half-Orc</option>
+                            <option value="Human">Human</option>
+                            <option value="Tiefling">Tiefling</option>
+                        </select>
+                    </div>
+                    <div class="input-group my-1">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="input-group-select-class">Class (Optional)</label>
+                        </div>
+                        <select class="custom-select" id="input-group-select-class">
+                            <option value="" selected>Choose...</option>
+                            <option value="Barbarian">Barbarian</option>
+                            <option value="Bard">Bard</option>
+                            <option value="Cleric">Cleric</option>
+                            <option value="Druid">Druid</option>
+                            <option value="Fighter">Fighter</option>
+                            <option value="Monk">Monk</option>
+                            <option value="Paladin">Paladin</option>
+                            <option value="Ranger">Ranger</option>
+                            <option value="Rogue">Rogue</option>
+                            <option value="Sorceror">Sorceror</option>
+                            <option value="Warlock">Warlock</option>
+                            <option value="Wizard">Wizard</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            {{#each questions}}
+            <div class="card mb-2" data-question-id="{{this.id}}">
+                <div class="card-header text-white bg-secondary">
+                    {{this.text}}
+                </div>
+                <div class="container p-1">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action" data-score="1">
+                            {{this.answer01}}
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action" data-score="2">
+                            {{this.answer02}}
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action" data-score="3">
+                            {{this.answer03}}
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action" data-score="4">
+                            {{this.answer04}}
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action" data-score="5">
+                            {{this.answer05}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+            <button type="button" class="btn btn-info btn-lg btn-block">Submit</button>
+        </div>
+    </div>
+</div>

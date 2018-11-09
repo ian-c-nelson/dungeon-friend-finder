@@ -1,0 +1,17 @@
+.jumbotron {
+    margin-top: 1rem;
+}
+
+.jumbotron h4 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.jumbotron > p {
+    font-size: 18px;
+}
+
+.jumbotron a > i {
+    position: relative;
+    top: .3rem;
+}

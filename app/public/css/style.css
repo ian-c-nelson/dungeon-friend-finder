@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative|Merriweather|New+Rocker');
+
+body {
+    color: #2b0ec0;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 16px;
+}
+
+.navbar-brand {
+    font-family: 'New Rocker', cursive;
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 1rem;
+}
+
+.navbar-brand i {
+    color: #b81717;
+    font-size: 40px;
+}
+
+.navbar-brand span {
+    margin-left: 1rem;
+}
+
+.content {
+    margin-bottom: 3rem;
+}
+
+.footer {
+    height: 2rem;
+    color: white;
+    font-size: small;
+}
+
+.footer .muted-text {
+    font-size: x-small;
+    margin-left: 1rem;
+}
+
+.footer a,
+.footer a:visited {
+    color: white;
+}
