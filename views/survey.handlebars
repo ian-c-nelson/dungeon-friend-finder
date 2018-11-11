@@ -1,15 +1,14 @@
-<link rel="stylesheet" href="/static/css/survey.css">
 <script src="/static/js/survey.js"></script>
 
 <div class="container">
 
     <div id="survey-card" class="card bg-light my-2">
-        <div class="card-header text-white bg-info">
+        <div class="card-header text-white bg-secondary">
             <span>Survey Questions</span>
         </div>
         <div class="card-body p-2">
             <div id="about-you-card" class="card mb-2">
-                <div class="card-header text-white bg-secondary">
+                <div class="card-header text-white bg-info">
                     <span>About You</span>
                 </div>
                 <div class="container p-1">
@@ -17,7 +16,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="input-group-name">Name (Required)</span>
                         </div>
-                        <input id="input-name" type="text" class="form-control" aria-label="Name" aria-describedby="input-group-name">
+                        <input id="name-input" type="text" class="form-control" aria-label="Name" aria-describedby="input-group-name">
                     </div>
                     <div class="input-group my-1">
                         <div class="input-group-prepend">
@@ -62,7 +61,7 @@
 
             {{#each questions}}
             <div class="card mb-2" data-question-id="{{this.id}}">
-                <div class="card-header text-white bg-secondary">
+                <div class="card-header text-white bg-info">
                     {{this.text}}
                 </div>
                 <div class="container p-1">
@@ -87,7 +86,7 @@
             </div>
             {{/each}}
 
-            <button type="button" class="btn btn-info btn-lg btn-block">Submit</button>
+            <button id="submit-button" type="button" class="btn btn-info btn-lg btn-block">Submit</button>
         </div>
     </div>
 </div>

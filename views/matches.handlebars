@@ -1,0 +1,43 @@
+<div class="container">
+    <div id="party-card" class="card my-2">
+        <div class="card-header text-white bg-secondary">
+            <span>Your Party</span>
+        </div>
+        <div class="container p-1">
+            <div class="card party-member my-2">
+                <div class="card-header text-white bg-info">
+                    <span>{{this.userInfo.name}}</span>
+                </div>
+                <div class="container p-1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Class:</strong>&nbsp;{{this.userInfo.class}}</li>
+                        <li class="list-group-item"><strong>&nbsp;Race:</strong>&nbsp;{{this.userInfo.race}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="matches-card" class="card bg-light my-2">
+        <div class="card-header text-white bg-secondary">
+            <span>Top Five Potential Party Members</span>
+        </div>
+        <div class="card-body p-2">
+
+            {{#each this.matches}}
+            <div class="card match my-2">
+                <div class="card-header text-white bg-info">
+                    <span>{{this.adventurer.name}}</span><span class="badge badge-light">{{this.matchScore}}</span>
+                </div>
+                <div class="container p-1">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Class:</strong>&nbsp;{{this.adventurer.class}}</li>
+                        <li class="list-group-item"><strong>&nbsp;Race:</strong>&nbsp;{{this.adventurer.race}}</li>
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</div>

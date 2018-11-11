@@ -6,6 +6,46 @@ body {
     font-size: 16px;
 }
 
+.card-header {
+    font-weight: bold;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.card-header .badge {
+    position: relative;
+    top:-2px;
+    margin-left: .5rem;
+}
+
+.custom-select,
+.custom-select > option,
+.input-group-text,
+.list-group-item {
+    font-size: smaller;
+    font-weight: bold;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+}
+
+.jumbotron {
+    margin-top: 1rem;
+}
+
+.jumbotron h4 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.jumbotron > p {
+    font-size: 18px;
+}
+
+.jumbotron a > i {
+    position: relative;
+    top: .3rem;
+}
+
 .navbar-brand {
     font-family: 'New Rocker', cursive;
     font-size: 30px;
@@ -41,3 +81,8 @@ body {
 .footer a:visited {
     color: white;
 }
+
+#survey-card > .card-header {
+    font-size: x-large;
+}
+

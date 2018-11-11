@@ -21,6 +21,7 @@
   "homepage": "https://github.com/ian-c-nelson/dungeon-friend-finder#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "lodash-core": "^0.8.1"
   }
 }

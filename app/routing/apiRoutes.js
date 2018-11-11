@@ -2,23 +2,32 @@
 // ROUTING
 // ===============================================================================
 
-module.exports = function(app, data) {
+module.exports = function (app) {
   // API GET Requests
   // ---------------------------------------------------------------------------
 
-  app.get("/api/data-points", function(req, res) {
-    res.json(data.questions);
+  app.get("/api/adventurers", function (req, res) {
+    res.json(app.data.adventurers);
   });
 
-  app.get("/api/friends", function(req, res) {
-    res.json(data.friends);
+  app.get("/api/data-points", function (req, res) {
+    res.json(app.data.questions);
+  });
+
+  app.get("/api/user", function (req, res) {
+    res.json(app.data.userInfo);
+  });
+
+  app.get("/api/matches/:howMany", function (req, res) {
+    var howMany = parseInt(req.params.howMany) || 5;
+    app.data.matches = app.lc.getTopN(app.data.userInfo, app.data.adventurers, howMany);
+    res.json(app.data.matches);
   });
 
   // API POST Requests
   // ---------------------------------------------------------------------------
-
-  app.post("/api/friends", function(req, res) {
-
+  app.post("/api/user", function (req, res) {
+    app.data.userInfo = req.body;
+    res.json(app.data.userInfo);
   });
-
 };

@@ -1,5 +1,5 @@
 // ===============================================================================
-// Potential Dungeon Friends
+// Potential Adventurers
 // ===============================================================================
 
 let seedNames = [
@@ -65,7 +65,7 @@ function getRandomScores() {
     return scores;
 }
 
-function generateDungeonFriends() {
+function generateAdventurers() {
     let tempArr = [];
     seedNames.forEach(name => {
         tempArr.push(
@@ -79,10 +79,6 @@ function generateDungeonFriends() {
     return tempArr;
 }
 
-let friendsArray = generateDungeonFriends();
-
-console.log("Generated Dungeon Friends");
-// console.log(friendsArray);
-
+console.log("Generated Adventurers");
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = friendsArray;
+module.exports = generateAdventurers();

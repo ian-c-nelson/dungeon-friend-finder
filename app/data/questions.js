@@ -1,5 +1,5 @@
 // ===============================================================================
-// Potential Dungeon Friends
+// Survey Questions
 // ===============================================================================
 
 var questionsArray = [
@@ -78,10 +78,10 @@ var questionsArray = [
   }, {
     id: "10",
     text: "A dragon lands heavily in front of your party and begins to inhale.",
-    answer01: "Move to the front of the group and attempt to shield them from the flames.",
-    answer02: "Cast any defensive magics you have and prepare for battle.",
+    answer01: "Let out a primal scream and charge the dragon with your weapon ready.",
+    answer02: "Move to the front of the group and attempt to shield them from the flames.",
     answer03: "Tell the group to spread out to minimize casualties.",
-    answer04: "Let out a primal scream and charge the dragon with your weapon ready.",
+    answer04: "Cast any defensive magics you have and prepare for battle.",
     answer05: "Hide behind the warrior and hope his body protects you from the flames.",
   }
 ];
