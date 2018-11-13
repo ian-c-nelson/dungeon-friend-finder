@@ -1,4 +1,4 @@
-# dungeon-friend-finder
+# Dungeon Friend Finder
 
 ## Match making service for adventurers.
 Creates a random pool of 100 D&D characters and assigns random survey answers to them.  Compares user answers and finds the top five candidates for the user's adventuring party.
