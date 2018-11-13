@@ -7,6 +7,7 @@
 * Node.js
 * Express
 * Handlebars
+* Lodash
 * jQuery
 * Bootstrap
 * Font Awesome
