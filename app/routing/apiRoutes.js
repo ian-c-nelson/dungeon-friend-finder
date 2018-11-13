@@ -1,3 +1,6 @@
+const CharacterGenerator = require("../modules/character-generator");
+const charGen = new CharacterGenerator();
+
 // ===============================================================================
 // ROUTING
 // ===============================================================================
@@ -28,6 +31,10 @@ module.exports = function (app) {
   // ---------------------------------------------------------------------------
   app.post("/api/user", function (req, res) {
     app.data.userInfo = req.body;
+
+    // let char = charGen.generateRandomCharacter(app.data.userInfo);
+    // char.scores = userInfo.scores
+
     res.json(app.data.userInfo);
   });
 };

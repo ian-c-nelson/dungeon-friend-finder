@@ -36,7 +36,6 @@ LogicController.prototype.getScoreMatchValue = function (info1, info2) {
 
 LogicController.prototype.mapMatchScores = function (userInfo, adventurers) {
     let matches = _.map(adventurers, adventurer => {
-        // console.log(friend);
         return {
             adventurer: adventurer,
             matchScore: this.getScoreMatchValue(userInfo, adventurer)

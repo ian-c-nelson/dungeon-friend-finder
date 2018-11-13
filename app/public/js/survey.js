@@ -13,7 +13,6 @@ $(document).ready(e => {
 
     $("#submit-button").on("click", e => {
         let scores = $(".list-group-item-action.active").map((_, o) => {
-            // console.log(o);
             return parseInt($(o).data("score"));
         }).get();
 
@@ -25,22 +24,20 @@ $(document).ready(e => {
         };
 
         // Test data 
-        userData = {
-            name: 'Itark Of The Howling Vandals',
-            class: 'Ranger',
-            race: 'Human',
-            scores: [5, 2, 1, 2, 3, 3, 3, 4, 1, 3]
-        };
+        // userData = {
+        //     name: 'Itark Of The Howling Vandals',
+        //     class: 'Ranger',
+        //     race: 'Human',
+        //     scores: [5, 2, 1, 2, 3, 3, 3, 4, 1, 3]
+        // };
 
         if (validateUserData(userData)) {
             // post the responses
-            $.post("/api/user", userData, res => {
-                console.log(res);
-                console.log("Posted");
+            $.post("/api/user", userData, () => {
                 window.location.replace("/matches");
             });
         } else {
-            alert("PLease answer all of the questions before submitting.")
+            alert("Please answer all of the questions before submitting.")
         }
     })
 });

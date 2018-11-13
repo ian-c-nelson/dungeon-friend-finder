@@ -9,7 +9,7 @@
 
 const express = require("express");
 const path = require("path");
-const LogicController = require("./logic-controller")
+const LogicController = require("./app/modules/logic-controller");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
